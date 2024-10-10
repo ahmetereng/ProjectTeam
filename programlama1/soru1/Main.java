@@ -14,10 +14,10 @@ public class Main {
             febDay = 29;
         }
         int[] dayCount = { 31, febDay, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-        if (month > 0 && month <= 12) {
-            if (dayCount[month - 1] >= day) {
-                System.out.println("You have entered a valid date");
-            }
+        if (month > 0 && month <= 12 && (dayCount[month - 1] >= day)) {
+            System.out.println("You have entered a valid date");
+        } else {
+            System.out.println("This is an invalid date");
         }
         input.close();
     }

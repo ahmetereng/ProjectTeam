@@ -29,6 +29,8 @@ public class Main {
             }
             System.out.println("" + first + second + third);
             System.out.println("" + third + second + first);
+        } else {
+            System.out.println("This is not a 3 digit Integer");
         }
 
         input.close();

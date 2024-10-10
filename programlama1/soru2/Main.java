@@ -15,12 +15,15 @@ public class Main {
                     isPalindrome = false;
                 }
             }
-        }
-        if (isPalindrome) {
-            System.out.println("The number is a palindrome");
+            if (isPalindrome) {
+                System.out.println("The number is a palindrome");
+            } else {
+                System.out.println("its not palindrome");
+            }
         } else {
-            System.out.println("its not palindrome");
+            System.out.println("This is not a 5 digit number");
         }
+
         input.close();
     }
 }

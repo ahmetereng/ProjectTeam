@@ -6,11 +6,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int number = input.nextInt();
+        String numberString = String.valueOf(number);
         if (String.valueOf(number).length() == 4) {
-            int first = (int) Math.floor(number % 10000 * 10);
-            int second = (int) Math.floor(number % 1000 * 10);
-            int third = (int) Math.floor(number % 100 * 10);
-            int fourth = (number % 10 * 10);
+            String[] numberList = numberString.split("");
+            int first = Integer.parseInt(numberList[0]);
+            int second = Integer.parseInt(numberList[1]);
+            int third = Integer.parseInt(numberList[2]);
+            int fourth = Integer.parseInt(numberList[3]);
+            System.out.println(first);
+            System.out.println(second);
+            System.out.println(third);
+            System.out.println(fourth);
+
             int sum = first + second + third + fourth;
             int product = first * second * third * fourth;
             if (sum == product) {
@@ -20,6 +27,8 @@ public class Main {
             } else {
                 System.out.println("product is greater than sum");
             }
+        } else {
+            System.out.println("You should enter a 4 digit number");
         }
         input.close();
     }
